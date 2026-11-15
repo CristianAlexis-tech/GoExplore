@@ -1,0 +1,111 @@
+.home {
+  --color-texto: #232620;
+  --color-texto-suave: #6d6f68;
+  --color-fondo: #ffffff;
+  --color-borde: #e4e3df;
+  --color-acento: #3f5c4e;
+  --color-acento-suave: #eef1ee;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--color-texto);
+}
+
+.home_hero {
+  background-color: var(--color-acento-suave);
+  text-align: center;
+  padding: 56px 24px;
+}
+
+.home_hero-titulo {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.home_hero-texto {
+  font-size: 15px;
+  color: var(--color-texto-suave);
+  max-width: 520px;
+  margin: 0 auto 24px;
+}
+
+.home_destacados,
+.home_pasos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.home_seccion-titulo {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+
+.home_tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.resumen-ruta {
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  padding: 18px;
+  background-color: var(--color-fondo);
+}
+
+.resumen-ruta_cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.resumen-ruta_km {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-acento);
+}
+
+.resumen-ruta_nombre {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.resumen-ruta_zona {
+  font-size: 13px;
+  color: var(--color-texto-suave);
+  margin: 0;
+}
+
+.home_lista-pasos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.home_lista-pasos li {
+  font-size: 14px;
+  color: var(--color-texto-suave);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home_paso-numero {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--color-acento);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

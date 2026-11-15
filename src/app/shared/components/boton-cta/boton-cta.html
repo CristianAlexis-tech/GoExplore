@@ -1,0 +1,10 @@
+<!-- Botón reutilizable con soporte de variantes y emisión de eventos -->
+<button
+  type="button"
+  class="boton-cta"
+  [class.boton-cta--secundario]="variante === 'secundario'"
+  [class.boton-cta--deshabilitado]="deshabilitado"
+  [disabled]="deshabilitado"
+  (click)="alHacerClic()">
+  {{ texto }}
+</button>

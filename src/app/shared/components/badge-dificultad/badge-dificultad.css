@@ -1,0 +1,22 @@
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 99px;
+}
+
+.badge--baja {
+  background-color: #e6f4ea;
+  color: #1e6f3d;
+}
+
+.badge--media {
+  background-color: #fef3db;
+  color: #945800;
+}
+
+.badge--alta {
+  background-color: #fce8e6;
+  color: #b3261e;
+}

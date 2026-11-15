@@ -1,0 +1,8 @@
+<!-- Etiqueta semántica de dificultad de la ruta -->
+<span
+  class="badge"
+  [class.badge--baja]="nivel === 'Baja'"
+  [class.badge--media]="nivel === 'Media'"
+  [class.badge--alta]="nivel === 'Alta'">
+  Dificultad: {{ nivel }}
+</span>

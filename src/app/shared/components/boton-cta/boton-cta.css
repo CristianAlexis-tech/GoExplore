@@ -1,0 +1,26 @@
+.boton-cta {
+  --color-acento: #3f5c4e;
+  --color-acento-suave: #eef1ee;
+  display: inline-block;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: var(--color-acento);
+  color: #ffffff;
+  border: 1px solid var(--color-acento);
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.boton-cta--secundario {
+  background-color: var(--color-acento-suave);
+  color: var(--color-acento);
+  border-color: var(--color-acento-suave);
+}
+
+.boton-cta--deshabilitado {
+  cursor: not-allowed;
+  opacity: 0.6;
+}

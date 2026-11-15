@@ -1,0 +1,59 @@
+.cabecera {
+  --color-texto: #232620;
+  --color-fondo: #ffffff;
+  --color-borde: #e4e3df;
+  --color-acento: #3f5c4e;
+  --color-acento-suave: #eef1ee;
+  background-color: var(--color-fondo);
+  border-bottom: 1px solid var(--color-borde);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.cabecera_fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+}
+
+.cabecera_marca {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--color-texto);
+}
+
+.cabecera_titulo {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.cabecera_nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cabecera_enlace {
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: 500;
+}
+
+.cabecera_enlace:hover {
+  background-color: var(--color-acento-suave);
+}
+
+.cabecera_enlace--activo {
+  background-color: var(--color-acento);
+  color: #ffffff;
+}

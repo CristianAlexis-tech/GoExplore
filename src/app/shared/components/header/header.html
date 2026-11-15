@@ -1,0 +1,19 @@
+<!-- Cabecera principal de navegación -->
+<header class="cabecera">
+  <div class="cabecera_fila">
+    <!-- Logotipo que redirige a la pantalla de inicio -->
+    <a routerLink="/home" class="cabecera_marca">
+      <span class="cabecera_logo" aria-hidden="true">⛰️</span>
+      <span class="cabecera_titulo">GoExplore</span>
+    </a>
+
+    <!-- Menú de navegación principal entre las 5 vistas -->
+    <nav class="cabecera_nav" aria-label="Navegación principal">
+      <a routerLink="/home" routerLinkActive="cabecera_enlace--activo" class="cabecera_enlace">Inicio</a>
+      <a routerLink="/rutas" routerLinkActive="cabecera_enlace--activo" class="cabecera_enlace">Explorar Rutas</a>
+      <a routerLink="/mochila" routerLinkActive="cabecera_enlace--activo" class="cabecera_enlace">Mi Mochila</a>
+      <a routerLink="/equipamiento" routerLinkActive="cabecera_enlace--activo" class="cabecera_enlace">Equipamiento</a>
+      <a routerLink="/login" routerLinkActive="cabecera_enlace--activo" class="cabecera_enlace cabecera_enlace--acceso">Acceso</a>
+    </nav>
+  </div>
+</header>

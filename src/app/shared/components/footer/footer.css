@@ -1,0 +1,57 @@
+.pie {
+  background-color: #1e2722;
+  color: #cfd5cf;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  margin-top: 48px;
+}
+
+.pie_columnas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 24px 24px;
+}
+
+.pie_titulo {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.pie_texto {
+  color: #8b948d;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.pie_lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pie_enlace {
+  color: #8b948d;
+  text-decoration: none;
+}
+
+.pie_enlace:hover {
+  color: #ffffff;
+}
+
+.pie_inferior {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  border-top: 1px solid #33403a;
+  color: #8b948d;
+  text-align: center;
+}

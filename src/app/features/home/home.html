@@ -1,0 +1,35 @@
+<!-- Pantalla principal de bienvenida -->
+<main class="home">
+  <!-- Sección Hero principal -->
+  <section class="home_hero">
+    <h1 class="home_hero-titulo">Descubre las mejores cumbres y senderos</h1>
+    <p class="home_hero-texto">Planifica tu próxima ruta de montaña, consulta la dificultad y prepara tu mochila con seguridad.</p>
+    <app-boton-cta texto="Explorar todas las rutas" (accionClic)="irAlCatalogo()"></app-boton-cta>
+  </section>
+
+  <!-- Sección de rutas destacadas -->
+  <section class="home_destacados">
+    <h2 class="home_seccion-titulo">Rutas destacadas de la temporada</h2>
+    <div class="home_tarjetas">
+      <article class="resumen-ruta" *ngFor="let ruta of rutasDestacadas">
+        <div class="resumen-ruta_cabecera">
+          <app-badge-dificultad [nivel]="ruta.dificultad"></app-badge-dificultad>
+          <span class="resumen-ruta_km">{{ ruta.distanciaKm }} km</span>
+        </div>
+        <h3 class="resumen-ruta_nombre">{{ ruta.nombre }}</h3>
+        <p class="resumen-ruta_zona">📍 {{ ruta.zona }} · ⏱️ {{ ruta.duracionHoras }}</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Pasos para preparar una salida -->
+  <section class="home_pasos">
+    <h2 class="home_seccion-titulo">Cómo preparar tu salida en 4 pasos</h2>
+    <ol class="home_lista-pasos">
+      <li><span class="home_paso-numero">1</span> Elige una ruta acorde a tu nivel físico</li>
+      <li><span class="home_paso-numero">2</span> Guárdala en tu sección Mi Mochila</li>
+      <li><span class="home_paso-numero">3</span> Revisa el checklist de Equipamiento</li>
+      <li><span class="home_paso-numero">4</span> ¡Disfruta de la montaña con prudencia!</li>
+    </ol>
+  </section>
+</main>
