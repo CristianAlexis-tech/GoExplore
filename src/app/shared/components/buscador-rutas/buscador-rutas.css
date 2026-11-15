@@ -1,0 +1,42 @@
+.buscador {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f6f8f6;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.buscador_input {
+  flex: 1;
+  min-width: 240px;
+  padding: 10px 14px;
+  border: 1px solid #e4e3df;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.buscador_filtros {
+  display: flex;
+  gap: 6px;
+}
+
+.buscador_boton {
+  border: 1px solid #e4e3df;
+  background-color: #ffffff;
+  color: #6d6f68;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buscador_boton--activo {
+  background-color: #3f5c4e;
+  color: #ffffff;
+  border-color: #3f5c4e;
+}

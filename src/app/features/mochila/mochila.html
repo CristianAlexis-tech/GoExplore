@@ -1,1 +1,25 @@
-<p>mochila works!</p>
+<!-- Página de rutas guardadas en la mochila del usuario -->
+<main class="mochila">
+    <div class="mochila_cabecera">
+        <div>
+            <h1 class="mochila_titulo">Mi Mochila de Rutas</h1>
+            <p class="mochila_subtitulo">Tus próximas travesías seleccionadas para el fin de semana.</p>
+        </div>
+        <div class="mochila_resumen">
+            <span>Rutas: <strong>{{ rutasGuardadas.length }}</strong></span>
+            <span>Total acumulado: <strong>{{ totalKilometros }} km</strong></span>
+        </div>
+    </div>
+    <div class="mochila_grid" *ngIf="rutasGuardadas.length > 0; else mochilaVacia">
+        <app-tarjeta-ruta *ngFor="let ruta of rutasGuardadas" [idRuta]="ruta.id" [nombre]="ruta.nombre"
+            [zona]="ruta.zona" [distanciaKm]="ruta.distanciaKm" [duracionHoras]="ruta.duracionHoras"
+            [dificultad]="ruta.dificultad" [enMochila]="ruta.enMochila" (cambiarMochila)="quitarDeMochila($event)">
+        </app-tarjeta-ruta>
+    </div>
+    <ng-template #mochilaVacia>
+        <div class="mochila_vacia">
+            <p>Todavía no has guardado ninguna ruta en tu mochila.</p>
+            <app-boton-cta texto="Buscar rutas ahora" (accionClic)="irAExplorar()"></app-boton-cta>
+        </div>
+    </ng-template>
+</main>

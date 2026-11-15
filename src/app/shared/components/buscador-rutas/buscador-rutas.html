@@ -1,1 +1,23 @@
-<p>buscador-rutas works!</p>
+<!-- Barra de herramientas para buscar y filtrar rutas -->
+<div class="buscador">
+    <input type="text" class="buscador_input" [placeholder]="placeholderTexto" [(ngModel)]="textoActual"
+        (input)="alEscribir()">
+    <div class="buscador_filtros" role="group" aria-label="Filtrar por dificultad">
+        <button type="button" class="buscador_boton" [class.buscador_boton--activo]="dificultadActual === 'Todas'"
+            (click)="alCambiarDificultad('Todas')">
+            Todas
+        </button>
+        <button type="button" class="buscador_boton" [class.buscador_boton--activo]="dificultadActual === 'Baja'"
+            (click)="alCambiarDificultad('Baja')">
+            Baja
+        </button>
+        <button type="button" class="buscador_boton" [class.buscador_boton--activo]="dificultadActual === 'Media'"
+            (click)="alCambiarDificultad('Media')">
+            Media
+        </button>
+        <button type="button" class="buscador_boton" [class.buscador_boton--activo]="dificultadActual === 'Alta'"
+            (click)="alCambiarDificultad('Alta')">
+            Alta
+        </button>
+    </div>
+</div>

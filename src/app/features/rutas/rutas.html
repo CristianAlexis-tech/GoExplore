@@ -1,1 +1,16 @@
-<p>rutas works!</p>
+<!-- Página de exploración y filtrado del catálogo de rutas -->
+<main class="catalogo">
+    <h1 class="catalogo_titulo">Explorar Rutas de Senderismo</h1>
+    <p class="catalogo_subtitulo">Filtra por cordillera o exigencia física y añade tus recorridos a la mochila.</p>
+    <app-buscador-rutas (cambioTexto)="actualizarTexto($event)" (cambioDificultad)="actualizarDificultad($event)">
+    </app-buscador-rutas>
+    <div class="catalogo_grid" *ngIf="rutasFiltradas.length > 0; else sinResultados">
+        <app-tarjeta-ruta *ngFor="let ruta of rutasFiltradas" [idRuta]="ruta.id" [nombre]="ruta.nombre"
+            [zona]="ruta.zona" [distanciaKm]="ruta.distanciaKm" [duracionHoras]="ruta.duracionHoras"
+            [dificultad]="ruta.dificultad" [enMochila]="ruta.enMochila" (cambiarMochila)="gestionarMochila($event)">
+        </app-tarjeta-ruta>
+    </div>
+    <ng-template #sinResultados>
+        <p class="catalogo_vacio">No se han encontrado rutas que coincidan con tu búsqueda.</p>
+    </ng-template>
+</main>

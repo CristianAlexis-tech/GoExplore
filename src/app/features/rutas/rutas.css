@@ -1,0 +1,33 @@
+.catalogo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.catalogo_titulo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #232620;
+    margin: 0 0 8px;
+}
+
+.catalogo_subtitulo {
+    font-size: 14px;
+    color: #6d6f68;
+    margin: 0 0 24px;
+}
+
+.catalogo_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.catalogo_vacio {
+    text-align: center;
+    padding: 40px;
+    color: #6d6f68;
+    background-color: #f6f8f6;
+    border-radius: 12px;
+}
