@@ -1,1 +1,39 @@
-<p>login works!</p>
+<!-- Pantalla de acceso y registro de usuarios -->
+<main class="acceso">
+    <div class="acceso_tarjeta">
+        <div class="acceso_pestañas" role="tablist">
+            <button type="button" class="acceso_pestaña" [class.acceso_pestaña--activa]="modo === 'login'"
+                (click)="cambiarModo('login')">
+                Iniciar sesión
+            </button>
+            <button type="button" class="acceso_pestaña" [class.acceso_pestaña--activa]="modo === 'registro'"
+                (click)="cambiarModo('registro')">
+                Registrarse
+            </button>
+        </div>
+        
+        <p class="acceso_mensaje" *ngIf="mensajeConfirmacion">{{ mensajeConfirmacion }}</p>
+
+        <!-- Formulario de Inicio de Sesión -->
+        <form class="acceso_formulario" *ngIf="modo === 'login'" (ngSubmit)="procesarFormulario()">
+            <label class="acceso_etiqueta" for="login-email">Correo electrónico</label>
+            <input class="acceso_campo" id="login-email" name="emailLogin" [(ngModel)]="emailLogin" type="email"
+                placeholder="senderista@ejemplo.com">
+            <label class="acceso_etiqueta" for="login-password">Contraseña</label>
+            <input class="acceso_campo" id="login-password" type="password" placeholder="........">
+            <button type="submit" class="acceso_boton">Entrar</button>
+        </form>
+
+        <!-- Formulario de Registro -->
+        <form class="acceso_formulario" *ngIf="modo === 'registro'" (ngSubmit)="procesarFormulario()">
+            <label class="acceso_etiqueta" for="registro-nombre">Nombre completo</label>
+            <input class="acceso_campo" id="registro-nombre" name="nombreRegistro" [(ngModel)]="nombreRegistro"
+                type="text" placeholder="Nombre y apellidos">
+            <label class="acceso_etiqueta" for="registro-email">Correo electrónico</label>
+            <input class="acceso_campo" id="registro-email" type="email" placeholder="senderista@ejemplo.com">
+            <label class="acceso_etiqueta" for="registro-password">Contraseña</label>
+            <input class="acceso_campo" id="registro-password" type="password" placeholder="........">
+            <button type="submit" class="acceso_boton">Crear cuenta</button>
+        </form>
+    </div>
+</main>

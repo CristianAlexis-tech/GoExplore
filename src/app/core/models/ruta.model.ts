@@ -15,6 +15,7 @@ export interface RutaSenderismo {
   dificultad: NivelDificultad;
   destacada: boolean;
   enMochila: boolean;
+  imagen: string;
 }
 
 export interface ItemEquipamiento {

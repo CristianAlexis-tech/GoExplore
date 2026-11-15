@@ -20,7 +20,7 @@ describe('BadgeDificultad Component (Pruebas Unitarias)', () => {
   });
 
   it('debe aplicar la clase CSS badge--alta cuando el nivel es Alta', () => {
-    component.nivel = 'Alta';
+    fixture.componentRef.setInput('nivel', 'Alta');
     fixture.detectChanges();
     const span = (fixture.nativeElement as HTMLElement).querySelector('.badge');
     expect(span?.classList.contains('badge--alta')).toBe(true);

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { NivelDificultad } from '../../../core/models/ruta.model';
 import { BadgeDificultad } from '../badge-dificultad/badge-dificultad';
 import { BotonCta } from '../boton-cta/boton-cta';
@@ -10,7 +11,7 @@ import { BotonCta } from '../boton-cta/boton-cta';
 @Component({
   selector: 'app-tarjeta-ruta',
   standalone: true,
-  imports: [BadgeDificultad, BotonCta],
+  imports: [CommonModule, BadgeDificultad, BotonCta],
   templateUrl: './tarjeta-ruta.html',
   styleUrl: './tarjeta-ruta.css',
 })
@@ -22,8 +23,11 @@ export class TarjetaRuta {
   @Input() duracionHoras: string = '0h';
   @Input() dificultad: NivelDificultad = 'Baja';
   @Input() enMochila: boolean = false;
+  @Input() imagen: string = '';
+
   /** Evento que emite el ID de la ruta cuando el usuario pulsa guardar o quitar */
   @Output() cambiarMochila = new EventEmitter<number>();
+  
   notificarCambio(): void {
     this.cambiarMochila.emit(this.idRuta);
   }

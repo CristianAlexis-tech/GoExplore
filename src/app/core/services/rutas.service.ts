@@ -20,7 +20,8 @@ export class RutasService {
       duracionHoras: '2h 30m',
       dificultad: 'Baja',
       destacada: true,
-      enMochila: true
+      enMochila: true,
+      imagen: 'https://commons.wikimedia.org/wiki/Special:FilePath/Laguna_Grande_de_Pe%C3%B1alara_01.jpg?width=800'
     },
     {
       id: 2,
@@ -30,7 +31,8 @@ export class RutasService {
       duracionHoras: '4h 00m',
       dificultad: 'Media',
       destacada: true,
-      enMochila: false
+      enMochila: false,
+      imagen: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ruta_del_cares.jpg?width=800'
     },
     {
       id: 3,
@@ -40,7 +42,8 @@ export class RutasService {
       duracionHoras: '6h 30m',
       dificultad: 'Alta',
       destacada: true,
-      enMochila: false
+      enMochila: false,
+      imagen: 'https://commons.wikimedia.org/wiki/Special:FilePath/Mulhacen01.jpg?width=800'
     },
     {
       id: 4,
@@ -50,7 +53,8 @@ export class RutasService {
       duracionHoras: '1h 15m',
       dificultad: 'Baja',
       destacada: false,
-      enMochila: false
+      enMochila: false,
+      imagen: 'https://commons.wikimedia.org/wiki/Special:FilePath/Robledal_de_Ulzama.jpg?width=800'
     },
     {
       id: 5,
@@ -60,7 +64,9 @@ export class RutasService {
       duracionHoras: '5h 15m',
       dificultad: 'Media',
       destacada: true,
-      enMochila: false
+      enMochila: false,
+      imagen: 'https://commons.wikimedia.org/wiki/Special:FilePath/Cola_de_Caballo.jpg?width=800'
+
     },
     {
       id: 6,
@@ -70,7 +76,8 @@ export class RutasService {
       duracionHoras: '5h 45m',
       dificultad: 'Alta',
       destacada: false,
-      enMochila: false
+      enMochila: false,
+      imagen: 'https://commons.wikimedia.org/wiki/Special:FilePath/Pico_Urriellu_o_Naranjo_de_Bulnes_desde_su_base-Refugio_Urriellu-PN_Picos_de_Europa-Asturias-Spain.jpg?width=800'
     }
   ];
 

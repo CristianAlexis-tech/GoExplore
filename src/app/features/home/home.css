@@ -13,6 +13,12 @@
   background-color: var(--color-acento-suave);
   text-align: center;
   padding: 56px 24px;
+  
+background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+  url('https://commons.wikimedia.org/wiki/Special:FilePath/Picos_de_Europa_vistos_desde_la_Fuente_del_Chivo.jpg?width=1400');
+background-size: cover;
+background-position: center;
+color: #ffffff;
 }
 
 .home_hero-titulo {
@@ -23,7 +29,7 @@
 
 .home_hero-texto {
   font-size: 15px;
-  color: var(--color-texto-suave);
+  color: #f0f0f0;
   max-width: 520px;
   margin: 0 auto 24px;
 }

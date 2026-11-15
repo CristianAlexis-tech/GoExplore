@@ -1,59 +1,40 @@
-# SenderosCumbres
+# GoExplore - Aplicación SPA de Senderismo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.7.
+## Descripción
+Aplicación web SPA (*Single Page Application*) desarrollada en Angular para la consulta de rutas de montaña, planifi
 
-## Development server
+## Características Principales
+- **Arquitectura Modular Standalone:** Organización limpia en capas (`core`, `shared` y `features`).
+- **5 Componentes de Página Navegables:** `Home` (portada), `Explorar Rutas` (catálogo filtrable), `Mi Mochila` (favoritos y  cálculo de km), `Equipamiento` (checklist interactivo) y `Acceso` (Login/Registro).
+- **4 Componentes Presentacionales Reutilizables:** `BotonCta`, `BadgeDificultad`, `TarjetaRuta` y `BuscadorRutas` comunicados mediante `@Input()` y `@Output()`.
+- **Pruebas Unitarias Automatizadas:** Cobertura de componentes de lógica y DOM con Jasmine y Karma (`TestBed` y `ComponentFixture`).
 
-To start a local development server, run:
+## Tecnologías Utilizadas
+- **Framework:** Angular 18+ (Standalone Components)
+- **Lenguaje:** TypeScript
+- **Styling:** CSS3 con variables nativas (Custom Properties)
+- **Routing:** Angular Router
 
-```bash
-ng serve
-```
+## Instalación y/o configuración
+1. Clonar el repositorio o descomprimir el archivo entregable.
+2. Instalar las dependencias ejecutando:
+    ```bash
+    npm install
+ 
+3. Levantar el servidor de desarrollo local:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+    ng serve -o
 
-## Code scaffolding
+4. Ejecutar la suite de pruebas unitarias:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+    ng test
 
-```bash
-ng generate component component-name
-```
+5. Generar el empaquetado de producción en la carpeta dist/:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+    ng build
 
-```bash
-ng generate --help
-```
+Prerrequisitos
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    Node.js 18+
+    npm 9+
+    Angular CLI 17+

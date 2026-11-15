@@ -1,0 +1,92 @@
+.acceso {
+    --color-texto: #232620;
+    --color-texto-suave: #6d6f68;
+    --color-fondo: #ffffff;
+    --color-fondo-suave: #f6f8f6;
+    --color-borde: #e4e3df;
+    --color-acento: #3f5c4e;
+    --color-acento-suave: #eef1ee;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--color-texto);
+    display: flex;
+    justify-content: center;
+    padding: 56px 16px;
+    background-color: var(--color-fondo-suave);
+    min-height: 480px;
+}
+
+.acceso_tarjeta {
+    width: 100%;
+    max-width: 380px;
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.acceso_pestañas {
+    display: flex;
+    gap: 4px;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.acceso_pestaña {
+    flex: 1;
+    border: none;
+    background: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-texto-suave);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.acceso_pestaña--activa {
+    background-color: var(--color-acento-suave);
+    color: var(--color-acento);
+}
+
+.acceso_mensaje {
+    margin: 0 20px 8px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--color-acento-suave);
+    color: var(--color-acento);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.acceso_formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 20px 24px;
+}
+
+.acceso_etiqueta {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.acceso_campo {
+    font-size: 14px;
+    padding: 10px 12px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.acceso_boton {
+    margin-top: 18px;
+    background-color: var(--color-acento);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px;
+    cursor: pointer;
+}

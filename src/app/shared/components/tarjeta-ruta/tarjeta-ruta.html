@@ -1,13 +1,17 @@
 <!-- Tarjeta visual de una ruta de senderismo -->
 <article class="tarjeta-ruta">
+    <img *ngIf="imagen" [src]="imagen" [alt]="nombre" class="tarjeta-ruta_imagen">
+
     <div class="tarjeta-ruta_superior">
         <app-badge-dificultad [nivel]="dificultad"></app-badge-dificultad>
         <span class="tarjeta-ruta_distancia">{{ distanciaKm }} km · {{ duracionHoras }}</span>
     </div>
+
     <div class="tarjeta-ruta_cuerpo">
         <h3 class="tarjeta-ruta_nombre">{{ nombre }}</h3>
         <p class="tarjeta-ruta_zona">📍 {{ zona }}</p>
     </div>
+
     <div class="tarjeta-ruta_acciones">
         <app-boton-cta [texto]="enMochila ? 'Quitar de mi mochila' : 'Guardar en mochila'"
             [variante]="enMochila ? 'secundario' : 'primario'" (accionClic)="notificarCambio()">

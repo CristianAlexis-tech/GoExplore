@@ -1,1 +1,18 @@
-<p>equipamiento works!</p>
+<!-- Página de revisión de material obligatorio antes de salir a la montaña -->
+<main class="equipo">
+    <h1 class="equipo_titulo">Checklist de Equipamiento y Seguridad</h1>
+    <p class="equipo_subtitulo">Marca el material a medida que lo guardes antes de comenzar tu ruta.</p>
+    <div class="equipo_progreso">
+        Material preparado: <strong>{{ completadosCount }} de {{ listaItems.length }}</strong> elementos listos.
+    </div>
+    <ul class="equipo_lista">
+        <li *ngFor="let item of listaItems" class="equipo_item" [class.equipo_item--listo]="item.completado"
+            (click)="marcarItem(item.id)">
+            <input type="checkbox" [checked]="item.completado" aria-label="Marcar equipamiento">
+            <div class="equipo_detalle">
+                <span class="equipo_nombre">{{ item.nombre }}</span>
+                <span class="equipo_categoria">{{ item.categoria }}</span>
+            </div>
+        </li>
+    </ul>
+</main>

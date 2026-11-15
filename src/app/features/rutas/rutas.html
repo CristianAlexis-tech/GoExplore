@@ -7,7 +7,8 @@
     <div class="catalogo_grid" *ngIf="rutasFiltradas.length > 0; else sinResultados">
         <app-tarjeta-ruta *ngFor="let ruta of rutasFiltradas" [idRuta]="ruta.id" [nombre]="ruta.nombre"
             [zona]="ruta.zona" [distanciaKm]="ruta.distanciaKm" [duracionHoras]="ruta.duracionHoras"
-            [dificultad]="ruta.dificultad" [enMochila]="ruta.enMochila" (cambiarMochila)="gestionarMochila($event)">
+            [dificultad]="ruta.dificultad" [enMochila]="ruta.enMochila" [imagen]="ruta.imagen"
+            (cambiarMochila)="gestionarMochila($event)">
         </app-tarjeta-ruta>
     </div>
     <ng-template #sinResultados>
